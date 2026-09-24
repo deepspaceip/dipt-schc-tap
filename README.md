@@ -11,6 +11,8 @@ changes to the applications or the IP stack on either host.
 Important: this is a research prototype meant to experiment with header compression for IP in deep
 space, not a production-ready tool.
 
+Current version: 0.9.0
+
 ### Features
 
 - **SCHC compression of IPv6 + UDP headers**: uses field descriptors, matching operators and
@@ -51,6 +53,7 @@ Options:
   peer, so that both ends can be given the same netmask pairs on the command line
 - `-v`, `--verbose`: debug logging
 - `-q`, `--quiet`: only log warnings and errors
+- `-V`, `--version`: print the version and exit
 
 Creating TAP interfaces requires root privileges (or `CAP_NET_ADMIN`).
 

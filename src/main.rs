@@ -118,6 +118,7 @@ fn forward_frames(
 }
 
 #[derive(Parser)]
+#[command(version)]
 struct Cli {
     #[arg(short, long)]
     swap_netmask_pairs: bool,
@@ -145,6 +146,8 @@ fn main() -> anyhow::Result<()> {
         .format_target(false)
         .format_timestamp(None)
         .init();
+
+    info!("schc-tap {}", env!("CARGO_PKG_VERSION"));
 
     let in_name = &cli.in_tap_ifname;
     let out_name = &cli.out_tap_ifname;
